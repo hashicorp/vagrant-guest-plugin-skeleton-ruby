@@ -13,8 +13,10 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.6'
-      - name: Build and release
-        uses: cadwallion/publish-rubygems-action@master
+      - name: Build and release gem
         env:
-          RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_API_KEY}}
-          RELEASE_COMMAND: rake release
+          GEM_HOST_API_KEY: ${{ secrets.GEM_HOST_API_KEY }}
+        run: |
+          gem build *.gemspec
+          gem push *.gem
+        working-directory: ${{github.workspace}}
