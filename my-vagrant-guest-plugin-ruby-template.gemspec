@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.description   = "Vagrant guest plugin"
   gem.summary       = "Vagrant guest plugin"
   gem.license       = 'MIT'
-  gem.homepage      = "https://github.com/hashicorp/vagrant-guest-plugin-ruby-template"
+  gem.homepage      = "https://github.com/hashicorp/vagrant-guest-plugin-skeleton-ruby"
 
   gem.add_development_dependency "rake", "~> 13.0"
   gem.add_development_dependency "rspec", "~> 3.5.0"
